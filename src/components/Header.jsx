@@ -13,15 +13,15 @@ const Header = () => {
     const quantity = useSelector((state) => state.cart.totalQuantity)
     const navbarRef = useRef();
     const prevScrollY = useRef(0);
-    const dispatch=useDispatch()
-    const {currentUser}=useAuth()
-    const handleSignOut=(e)=>{
-      alert("jjj")
-      e.preventDefault()
-      signOut(auth)
-      dispatch(logout())
-    }
-    console.log(currentUser)  //getting undefined over here
+    // const dispatch=useDispatch()
+    // const {currentUser}=useAuth()
+    // const handleSignOut=(e)=>{
+    //   alert("jjj")
+    //   e.preventDefault()
+    //   signOut(auth)
+    //   dispatch(logout())
+    // }
+    // console.log(currentUser)  //getting undefined over here
     useEffect(() => {
       const handleScroll = () => {
         const currentScrollY = window.scrollY;
@@ -66,13 +66,11 @@ const Header = () => {
             <HeartIcon className='w-7 h-7'/>
             <span className='bg-black rounded-full flex items-center justify-center text-white h-5 w-5 -top-2 -right-2 absolute '>0</span>
             </span>
-          
+{/*           
             <div className='relative inline-block text-left'>
 
             <img src={currentUser?currentUser.photoURL:""} alt="" className='w-7 h-7 rounded-full object-cover hover:cursor-pointer' onClick={()=>SetClicked(!clicked)}/>
             
-            {/* <img src="https://firebasestorage.googleapis.com/v0/b/clones-d2563.appspot.com/o/images%2F1690202456196test?alt=media&token=aa9e5433-bd08-4129-9bd3-105a56c590e6" alt="" className='w-7 h-7 rounded-full object-cover hover:cursor-pointer' onClick={()=>SetClicked(!clicked)}/> */}
-            {/* <h1>{currentUser ? (currentUser.email):("fuck you")}</h1> */}
             {clicked && (
 
             <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
@@ -83,7 +81,7 @@ const Header = () => {
     </div>
   </div>
             )}
-            </div>
+            </div> */}
 
             <div className='relative inline-block text-left mr-4  sm:hidden' onClick={()=>{SetMenuOpen(!menuOpen)}}>
               {menuOpen?(<XMarkIcon className='w-7 h-7 block'/>):(<Bars3Icon className='w-7 h-7 '/>)}
@@ -91,9 +89,9 @@ const Header = () => {
 
 <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
 <div className="py-1" >
-<li href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Your Profile</li>
-<li href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Settings</li>
-<li href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-900 hover:text-gray-900 cursor-pointer" role="menuitem" ><button onClick={handleSignOut} className='cursor-pointer'> Sign out</button></li>
+<Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Home</Link>
+<Link to="/shop" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Shop</Link>
+<Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-900 hover:text-gray-900 cursor-pointer" role="menuitem" > About</Link>
 </div>
 </div>
 )}
