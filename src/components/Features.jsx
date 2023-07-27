@@ -17,21 +17,21 @@ const Features = () => {
             <CurrencyRupeeIcon className='w-14 h-14'/>
             <div>
                 <h4>MoneyBack Guarentee</h4>
-                <span className='text-gray-300'>Free Shipping for orders over £130.</span>
+                <span className='text-gray-300'>Dont like the Product? Return within 30days.</span>
             </div>
         </div>
         <div className='flex gap-3'>
             <PhoneIcon className='w-14 h-14'/>
             <div>
                 <h4>24*7 Support</h4>
-                <span className='text-gray-300'>Free Shipping for orders over £130.</span>
+                <span className='text-gray-300'>Any query,any problem we are here to solve.</span>
             </div>
         </div>
         <div className='flex gap-3'>
             <CreditCardIcon className='w-14 h-14'/>
             <div>
                 <h4>Flexible payment</h4>
-                <span className='text-gray-300'>Free Shipping for orders over £130.</span>
+                <span className='text-gray-300'>Pay by card, cash, easy emi or even by UPI.</span>
             </div>
         </div>
         </div>

@@ -16,10 +16,6 @@ const ProductList = ({product}) => {
         // console.log(item)
         )
     }
-    {/* <ProductCard/>
-    <ProductCard/>
-    <ProductCard/>
-    <ProductCard/> */}
   
   </main>
   )

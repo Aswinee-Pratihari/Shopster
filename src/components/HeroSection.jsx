@@ -1,25 +1,25 @@
 import React from 'react';
-import HeroImage from '../assets/men6.png'; // replace with the actual path to your image
-import { useNavigate } from 'react-router-dom';
+
 
 function HeroSection() {
-  const navigate=useNavigate()
+ 
   return (
-    <div className=" bg-blue-200 py-10">
-        <div className='container mx-auto flex flex-col md:flex-row justify-between items-center p-8'>
+<header
+      className="relative bg-cover bg-center h-[600px] flex items-center justify-center"
+      style={{
+        backgroundImage: "url(https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
 
-      <div className="md:w-1/2 mb-8 md:mb-0">
-        <h1 className="text-4xl mb-4 font-bold">Welcome to ShopStar!</h1>
-        <p className="mb-4">
-          One stop destination for all your needs
-        </p>
-        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700" onClick={()=>navigate("/shop")}>Shop Now</button>
+      }}
+    >
+
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className='flex items-center justify-center  text-white absolute flex-col space-y-7'>
+        <h2 className='text-8xl'>SHOPSTER</h2>
+        <h5 className='text-3xl text-slate-300 tracking-wider'>One Stop Destination for Your Shopping</h5>
       </div>
-      <div className="md:w-1/2 flex justify-center">
-        <img className="w-1/2 h-full object-cover" src={HeroImage} alt="Hero" />
-      </div>
-        </div>
-    </div>
+
+
+    </header>
   );
 }
 

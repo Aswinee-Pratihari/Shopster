@@ -5,13 +5,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import ProductDetails from './pages/ProductDetails';
-import About from './pages/About';
-import { Toaster } from 'react-hot-toast';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import ProtectedRoute from './pages/ProtectedRoute';
+import PaymentComplete from './pages/PaymentComplete';
 
 const App = () => {
  const AppLayout=()=>(
@@ -39,20 +35,15 @@ const App = () => {
     },{
       path:"/cart",
       element:<Cart/>
-    },{
-      path:"about",
-      element:<About/>
+    },
+    {
+      path:"/complete",
+      element:<PaymentComplete/>
     },
   {
     path:"/checkout",
     element:<Checkout/>
-  },{
-    path:"/login",
-    element:<Login/>
-  },{
-    path:"/register",
-    element:<Register/>
-  },]
+  }]
   },
 ]);
 

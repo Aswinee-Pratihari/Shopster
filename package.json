@@ -12,13 +12,18 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@reduxjs/toolkit": "^1.9.5",
+    "@stripe/react-stripe-js": "^2.1.1",
+    "@stripe/stripe-js": "^1.54.1",
     "firebase": "^10.1.0",
+    "firebase-admin": "^11.10.1",
+    "firebase-functions": "^4.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-redux": "^8.1.1",
     "react-router-dom": "^6.14.2",
-    "react-star-ratings": "^2.3.0"
+    "react-star-ratings": "^2.3.0",
+    "stripe": "^12.14.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
